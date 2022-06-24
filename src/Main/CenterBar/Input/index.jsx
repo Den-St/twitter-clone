@@ -17,7 +17,6 @@ import {
 } from "./style";
 import {AvatarUrl} from "../../../Icon/paths";
 import {SvgIcon} from "../../../Icon/SvgIcon";
-import {color} from "../../../palette";
 import {numberOfLetters} from "../../../helpers/common";
 
 const buttons = [

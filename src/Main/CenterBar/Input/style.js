@@ -8,6 +8,8 @@ export const InputContainer = styled.div`
   padding: 4px 0px;
   min-height: 120px;
   display: flex;
+  border-bottom: 2px solid ${color.borderGray};
+  margin-bottom: 1px;
 `;
 
 export const InputAvatarContainer = styled.div`
