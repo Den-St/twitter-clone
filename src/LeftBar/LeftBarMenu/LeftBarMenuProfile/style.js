@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {color} from "../../../palette";
 
 export const LeftBarMenuProfileContainer = styled.div`
   display: flex;
@@ -9,9 +10,10 @@ export const LeftBarMenuProfileContainer = styled.div`
   outline: none;
   border-radius: 50px;
 margin-bottom: 15px;
+cursor: pointer;
   &:hover {
     transition: 0.4s;
-    background-color: rgba(148, 148, 148, 0.7);
+    background-color: ${color.buttonLightGrayHover};
   }
 
   box-sizing: border-box;

@@ -30,7 +30,7 @@ export const LeftBarMenuDirectoryLogoSvg = styled.svg`
 export const LeftBarTwitButton = styled.button`
   width: 225px;
   height: 52px;
-  background-color: ${color.lightBlue};
+  background-color: ${color.logoBlue};
   border: none;
   outline: none;
   cursor: pointer;

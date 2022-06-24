@@ -1,9 +1,12 @@
 import {
-    ListsPath,
+    EarthPath,
+    EmojiPath,
+    GifPath,
+    ListsPath, LocationPath,
     LogoPath,
-    MainPath,
+    MainPath, MediaPath,
     MessagesPath, MorePath,
-    NotificationsPath, ProfilePath,
+    NotificationsPath, PlanPath, PollPath, ProfilePath,
     StoredPath,
     ViewPath
 } from "./paths";
@@ -19,6 +22,15 @@ export const ChildrenSvg = ({type}) => {
     if(type === 'lists') return <ListsPath/>
     if(type === 'profile') return <ProfilePath/>
     if(type === 'more') return <MorePath/>
+
+    if(type === 'media') return <MediaPath/>
+    if(type === 'gif') return <GifPath/>
+    if(type === 'poll') return <PollPath/>
+    if(type === 'emoji') return <EmojiPath/>
+    if(type === 'plan') return <PlanPath/>
+    if(type === 'location') return <LocationPath/>
+
+    if(type === 'earth') return <EarthPath/>
 
     return null
 }

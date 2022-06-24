@@ -4,7 +4,6 @@ export const LeftBarContainer = styled.div`
   width: 100%;
   height: 100%;
   max-width: 30%;
-  
   box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
