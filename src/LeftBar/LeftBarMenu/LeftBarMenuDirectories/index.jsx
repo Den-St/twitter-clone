@@ -11,7 +11,7 @@ import {SvgIcon} from "../../../Icon/SvgIcon";
 const directoryItems = [
 
     {id:1, icon: 'main',
-    text: 'ГЛАВНАЯ'},
+    text: 'Главная'},
 
     {id:2, icon: 'view',
     text: 'Обзор'},

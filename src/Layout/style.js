@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const LayoutContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   font-family: Roboto;
   box-sizing: border-box;
   background: #ffffff;

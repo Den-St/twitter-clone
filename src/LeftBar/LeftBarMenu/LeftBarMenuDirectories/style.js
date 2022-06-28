@@ -20,6 +20,10 @@ export const LeftBarMenuDirectoryLogoButton = styled.button`
   cursor: pointer;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+  &:hover {
+    background-color: #e9e9fa;
+  }
 `;
 export const LeftBarMenuDirectoryLogoSvg = styled.svg`
   width: 28px;
@@ -40,7 +44,11 @@ export const LeftBarTwitButton = styled.button`
   font-family: Calibri;
   font-size: 20px;
   font-weight: 700;
-  
+  box-shadow: 0px 10px 0px #eeebeb;
+transition: 0.3s;
+  &:hover {
+    background-color: #1b8bd7;
+  }
 `;
 
 export const LeftBarMenuDirectoriesWrapper = styled.div`

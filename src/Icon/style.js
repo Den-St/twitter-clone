@@ -1,7 +1,13 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+
+export const disabledStyles = css`
+  opacity: 0.5;
+  pointer-events: none;
+`;
 
 export const StyledSvg = styled.svg`
-    ${({color}) => color && `color: ${color};`}
-    ${({fill}) => fill && `fill: ${fill};`}
-    ${({stroke}) => stroke && `stroke: ${stroke};`}
+  ${({color}) => color && `color: ${color};`}
+  ${({fill}) => fill && `fill: ${fill};`}
+  ${({stroke}) => stroke && `stroke: ${stroke};`}
+  ${({$disabled}) => $disabled && disabledStyles};
 `;

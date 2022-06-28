@@ -9,6 +9,8 @@ export const CenterHeaderContainer = styled.div`
   position: fixed;
   top: 0;
   cursor: pointer;
+  background-color: white;
+  z-index: 3;
 `;
 
 export const CenterHeaderWrapper = styled.div`
@@ -17,6 +19,8 @@ export const CenterHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  background-color: white;
+  
 `;
 
 export const MainText = styled.span`
@@ -28,12 +32,15 @@ export const MainText = styled.span`
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  background-color: white;
+
 `;
 
 export const MainButton = styled.button`
   width: 34px;
   height: 34px;
-  background-color: transparent;
+  background-color: white;
+  
   border: none;
   outline: none;
   box-sizing: border-box;
@@ -48,6 +55,7 @@ export const MainButton = styled.button`
   }
 
   & > svg {
+    background-color: white;
     width: 20px;
     height: 20px;
   }

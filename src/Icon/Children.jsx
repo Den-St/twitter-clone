@@ -1,13 +1,30 @@
 import {
+    ChelikPath,
+    CrossPath,
     EarthPath,
     EmojiPath,
     GifPath,
-    ListsPath, LocationPath,
+    LikePath,
+    ListsPath,
+    LocationPath,
     LogoPath,
-    MainPath, MediaPath,
-    MessagesPath, MorePath,
-    NotificationsPath, PlanPath, PollPath, ProfilePath,
+    MainPath,
+    MediaPath,
+    MessagesPath,
+    MorePath,
+    NotificationsPath,
+    PlanPath,
+    PollPath,
+    ProfilePath,
+    ResponsePath,
+    RetweetPath,
+    SearchPath,
+    SharePath,
+    SobakaPath,
+    StatsPath,
     StoredPath,
+    ThreeDotsPath,
+    TickPath,
     ViewPath
 } from "./paths";
 
@@ -31,6 +48,22 @@ export const ChildrenSvg = ({type}) => {
     if(type === 'location') return <LocationPath/>
 
     if(type === 'earth') return <EarthPath/>
+
+    if(type === 'threeDots') return <ThreeDotsPath/>
+    if(type === 'response') return <ResponsePath/>
+    if(type === 'retweet') return <RetweetPath/>
+    if(type === 'like') return <LikePath/>
+    if(type === 'share') return <SharePath/>
+    if(type === 'stats') return <StatsPath/>
+
+    if(type === 'search') return <SearchPath/>
+    if(type === 'cross') return <CrossPath/>
+
+    if(type==='tick') return <TickPath/>
+
+    if(type==='chelik') return <ChelikPath/>
+
+    if(type==='sobaka') return <SobakaPath/>
 
     return null
 }

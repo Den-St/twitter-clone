@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {color} from "../../../palette";
 import {TextArea} from "../../../Input";
+import {disabledStyles} from "../../../Icon/style";
 
 export const InputContainer = styled.div`
   box-sizing: border-box;
@@ -68,7 +69,6 @@ export const InputBarContainer = styled.div`
 `;
 
 export const InputBar = styled(TextArea)`
-  
   resize: none;
   box-sizing: border-box;
   width: 502px;
@@ -85,17 +85,21 @@ export const ButtonsContainer = styled.div`
   box-sizing: border-box;
   width: 502px;
   height: 48px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
+  border-top: ${(props) => (props.$focus || props.$isShowed)? `2px solid #eff3f4` : `none`};
 `;
 
 export const MenuButtons = styled.div`
   box-sizing: border-box;
   width: 208px;
-  height: 36px;
   margin-top: 12px;
   display: flex;
   align-items: center;
+  padding-top: 12px;
+  margin-bottom: 0px;
 `;
 
 export const MenuButton = styled.button`
@@ -108,10 +112,14 @@ export const MenuButton = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-
+  ${({$disabled}) => $disabled && disabledStyles};
   &:hover {
     transition: 0.15s;
     background-color: rgb(214, 233, 252);
+  }
+  &>svg{
+    width: 24px;
+    height: 24px;
   }
 `;
 
@@ -155,7 +163,8 @@ export const InputTweetButton = styled.button`
 export const OpenButtonContainer = styled.div`
   width: 502px;
   height: 36px;
-  display: ${(props) => props.$focus ? `block` : `none`}
+  display: ${(props) => (props.$focus || props.$isShowed)? `block` : `none`};
+  z-index: 5;
 `;
 
 export const OpenButton = styled.button`
@@ -164,12 +173,23 @@ export const OpenButton = styled.button`
   border: none;
   outline: none;
   background: transparent;
-  color:${color.logoBlue};
+  color: ${color.logoBlue};
   font-family: Calibri;
   font-size: 16px;
   font-weight: bolder;
   border-radius: 20px;
   border: 1px solid #cfd9de;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  &:hover {
+    background-color: rgb(214, 233, 243);
+  }
+  &:active {
+    background-color: rgb(143, 196, 225);
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -178,17 +198,28 @@ export const InfoContainer = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  display: ${(props) => props.$focus ? `block` : `none`}
-
+  display: ${(props) => (props.$focus || props.$isShowed)? `block` : `none`}
 `;
 
-export const InfoText = styled.span`
+export const InfoText = styled.button`
+  cursor: pointer;
   color:${color.logoBlue};
   font-family: Calibri;
   font-size: 16px;
   font-weight: bolder;
   display: flex;
   align-items: center;
+  border: none;
+  padding-bottom: 0px;
+  background-color: transparent;
+  outline: none;
+  border-radius: 10px;
+  &:hover {
+    background-color: rgb(214, 233, 243);
+  }
+  &:active {
+    background-color: rgb(143, 196, 225);
+  }
 `;
 
 export const NumberOfLetters = styled.span`
@@ -207,7 +238,7 @@ export const NumberOfLetters = styled.span`
   font-weight: 400;
   border-radius: 50%;
   border: 1px solid;
-  display: ${(props) => props.$focus ? `block` : `none`};
+  display: ${(props) => (props.$focus || props.$isShowed)? `block` : `none`};
   color: ${(props) => props.$danger ? `red` : color.logoBlue};
   color: ${(props) => props.$danger ? `red` : color.logoBlue};
   border-color: ${(props) => props.$danger ? `red` : color.logoBlue};

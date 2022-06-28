@@ -9,6 +9,7 @@ export const LeftBarMenuDirectoryItemContainer = styled.div`
   align-items: center;
   font-family: Calibri;
   font-size: 20px;
+
 `;
 
 export const LeftBarMenuDirectoryItemButton = styled.div`
@@ -18,12 +19,17 @@ export const LeftBarMenuDirectoryItemButton = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: 0.2s;
+  &:hover{
+    background-color: #f1f0f0;
+  }
 `;
 
 export const LeftBarMenuDirectoryItemText = styled.span`
   box-sizing: border-box;
   margin-left: 20px;
   font-family: Calibri;
+  
   ${
   (props) => { if(props?.$isActive) return `color: #333; font-weight: 700;`}
   }
